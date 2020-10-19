@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <File name="FileAppender" filename="/Users/liuxg/data/java_logs/java_app.log">
+      <JSONLayout compact="true" eventEol="true">
+          <KeyValuePair key="@timestamp" value="$${date:yyyy-MM-dd'T'HH:mm:ss.SSSZ}" />
+      </JSONLayout>
+    </File>
+  </Appenders>
+  <Loggers>
+    <Root level="trace">
+      <AppenderRef ref="FileAppender"/>
+    </Root>
+  </Loggers>
+</Configuration>
